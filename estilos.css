@@ -1,127 +1,157 @@
-/* Configuración general de la página (Fondo amarillo pastel) */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fffdf2;
-    color: #423315;
-    margin: 0;
-    padding: 35px 20px;
-    display: flex;
-    justify-content: center;
+/* --- ESTILO SOFISTICADO Y MODAL (TONOS CÁLIDOS DE GAMA EJECUTIVA) --- */
+:root {
+    --bg-gradient: linear-gradient(135deg, #fdfbf7 0%, #f4ebd0 100%);
+    --container-bg: rgba(255, 255, 255, 0.92);
+    --primary-color: #5c3a21;        /* Tostado profundo elegante */
+    --accent-color: #d97706;         /* Ámbar sofisticado */
+    --accent-light: #fef3c7;         /* Marfil cálido suave */
+    --text-dark: #2d241e;
+    --text-muted: #786452;
+    --border-subtle: #e6d5bc;
+    --shadow-elegant: 0 12px 36px rgba(92, 58, 33, 0.08);
 }
 
-/* Cuadro principal blanco más amplio y adaptable en altura */
+body {
+    font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal con efecto flotante y bordes depurados */
 .container {
-    max-width: 920px;
+    max-width: 960px;
     width: 100%;
-    height: auto;
-    background: #ffffff;
-    padding: 45px 50px;
-    border-radius: 22px;
-    box-shadow: 0 8px 28px rgba(217, 155, 0, 0.14);
-    border-top: 6px solid #f59e0b;
+    background: var(--container-bg);
+    backdrop-filter: blur(10px);
+    padding: 50px 60px;
+    border-radius: 28px;
+    box-shadow: var(--shadow-elegant);
+    border: 1px solid rgba(230, 213, 188, 0.6);
+    border-top: 5px solid var(--accent-color);
     box-sizing: border-box;
 }
 
-/* Encabezado con foto y nombre */
+/* Encabezado limpio y moderno */
 header {
     text-align: center;
-    border-bottom: 2px solid #fef3c7;
-    padding-bottom: 25px;
+    border-bottom: 2px solid var(--border-subtle);
+    padding-bottom: 35px;
+    margin-bottom: 30px;
+}
+
+.profile-img-wrapper {
+    display: inline-block;
+    padding: 4px;
+    background: linear-gradient(135deg, var(--accent-color), #fde047);
+    border-radius: 50%;
+    box-shadow: 0 6px 20px rgba(217, 119, 6, 0.2);
+    margin-bottom: 10px;
 }
 
 .profile-img {
-    width: 190px;
-    height: 190px;
+    width: 175px;
+    height: 175px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center 20%;
-    border: 4px solid #f59e0b;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    background-color: #fef9c3;
+    display: block;
+    border: 4px solid #ffffff;
 }
 
 h1 {
-    margin: 15px 0 5px 0;
-    color: #78350f;
+    margin: 15px 0 6px 0;
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .subtitle {
-    color: #b45309;
+    color: var(--accent-color);
     font-weight: 600;
-    margin-bottom: 15px;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.2px;
 }
 
-/* Botones de LinkedIn y GitHub */
+/* Botones con estilo minimalista refinado */
 .social-links a {
     display: inline-block;
-    margin: 0 5px;
-    padding: 8px 18px;
-    background-color: #fef9c3;
-    color: #92400e;
+    margin: 0 6px;
+    padding: 10px 22px;
+    background-color: var(--accent-light);
+    color: var(--primary-color);
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 20px;
-    border: 1px solid #fde047;
-    transition: 0.3s;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 25px;
+    border: 1px solid var(--border-subtle);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links a:hover {
-    background-color: #f59e0b;
+    background-color: var(--accent-color);
     color: #ffffff;
-    border-color: #f59e0b;
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);
 }
 
-/* Títulos de sección */
+/* Títulos de sección con acento elegante */
 h2 {
-    color: #78350f;
-    border-left: 5px solid #f59e0b;
-    padding-left: 12px;
-    margin-top: 40px;
-    margin-bottom: 16px;
-    font-size: 1.4rem;
+    color: var(--primary-color);
+    border-left: 4px solid var(--accent-color);
+    padding-left: 14px;
+    margin-top: 45px;
+    margin-bottom: 12px;
+    font-size: 1.35rem;
+    font-weight: 700;
 }
 
 .about-text p {
-    line-height: 1.65;
+    line-height: 1.75;
     text-align: justify;
-    margin-bottom: 12px;
+    color: var(--text-dark);
+    font-size: 1.02rem;
+    margin-bottom: 16px;
 }
 
 .hint {
     font-size: 0.85rem;
-    color: #a16207;
-    margin-top: -8px;
-    margin-bottom: 18px;
+    color: var(--text-muted);
+    margin-top: 0;
+    margin-bottom: 20px;
     font-style: italic;
+    font-weight: 500;
 }
 
-/* --- CUADRÍCULA PARA TARJETAS GIRATORIAS --- */
+/* --- TARJETAS GIRATORIAS (FLIP CARDS) CON TOQUE SOFISTICADO --- */
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 22px;
     margin-top: 15px;
 }
 
-/* Tarjetas de Fortalezas e Intereses (altura cómoda para leer la descripción al girar) */
+/* Alturas adaptadas para cada tarjeta */
 .flip-card.info-flip {
-    background-color: transparent;
     height: 195px;
     perspective: 2000px;
     cursor: pointer;
 }
 
-/* Tarjetas de docentes (altas para la foto limpia) */
 .flip-card.teacher-card {
-    background-color: transparent;
     height: 310px;
     perspective: 2000px;
     cursor: pointer;
 }
 
-/* Tarjetas de compañeros (altura compacta) */
 .flip-card.peer-card {
-    background-color: transparent;
     height: 165px;
     perspective: 2000px;
     cursor: pointer;
@@ -132,9 +162,9 @@ h2 {
     width: 100%;
     height: 100%;
     text-align: center;
-    border-radius: 28px;
-    box-shadow: 0 10px 25px rgba(180, 83, 9, 0.14);
-    transition: transform 0.75s cubic-bezier(0.4, 0.2, 0.2, 1);
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(92, 58, 33, 0.06);
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
     transform-style: preserve-3d;
 }
 
@@ -143,49 +173,42 @@ h2 {
     transform: rotateY(-180deg);
 }
 
-/* Estilos compartidos de ambas caras */
+/* Caras de las tarjetas */
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-radius: 28px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 24px;
     box-sizing: border-box;
     overflow: hidden;
+    border: 1px solid var(--border-subtle);
 }
 
-/* FRENTE de Fortalezas e Intereses: Fondo blanco con borde ámbar y texto elegante */
+/* Estética frontal sofisticada */
 .flip-card.info-flip .flip-card-front {
     background: #ffffff;
-    border: 2.5px solid #d97706;
-    color: #78350f;
-    padding: 22px;
+    color: var(--primary-color);
 }
 
-/* Toque amarillo suave para los intereses en el frente */
 .flip-card.info-flip .interest-front {
-    background: #fffef7;
+    background: #fffcf5;
 }
 
-/* FRENTE: Foto limpia en docentes */
 .teacher-card .flip-card-front {
     background: #ffffff;
-    border: 2.5px solid #d97706;
     padding: 0;
 }
 
-/* FRENTE en compañeros: Fondo blanco con borde amarillo oscuro */
 .peer-card .flip-card-front {
     background: #ffffff;
-    border: 2.5px solid #d97706;
-    padding: 20px;
-    color: #78350f;
+    color: var(--primary-color);
 }
 
 .teacher-full-img {
@@ -194,24 +217,21 @@ h2 {
     object-fit: cover;
     object-position: center top;
     display: block;
+    border-radius: 20px;
 }
 
-/* REVERSO: Información y descripciones */
+/* Reverso de las tarjetas con fondo limpio y legible */
 .flip-card-back {
-    background: #fef9c3;
-    border: 2.5px solid #d97706;
-    color: #78350f;
+    background: #fffcf5;
+    color: var(--text-dark);
     transform: rotateY(-180deg);
-    padding: 22px;
+    box-shadow: inset 0 0 0 2px rgba(217, 119, 6, 0.15);
 }
 
-/* Reverso específico para tarjetas de información (Fortalezas e Intereses) con fondo blanco */
 .info-flip .flip-card-back {
     background: #ffffff;
-    border: 2.5px solid #d97706;
-    color: #423315;
     text-align: left;
-    padding: 22px;
+    padding: 24px;
     justify-content: flex-start;
     align-items: flex-start;
     overflow-y: auto;
@@ -219,67 +239,73 @@ h2 {
 
 .info-flip .flip-card-back p {
     margin: 0;
-    font-size: 0.88rem;
-    line-height: 1.5;
-    color: #423315;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--text-dark);
 }
 
 .role {
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: #b45309;
+    letter-spacing: 1px;
+    color: var(--accent-color);
     display: block;
-    line-height: 1.35;
+    margin-bottom: 2px;
 }
 
-/* Línea separadora */
-.card-divider {
-    width: 45px;
-    border: 0;
-    border-top: 2px solid #d97706;
+/* Línea divisoria minimalista */
+.card-line {
+    width: 35px;
+    height: 2px;
+    background-color: var(--accent-color);
     margin: 10px auto;
+    border-radius: 2px;
 }
 
 .name {
-    font-size: 1.05rem;
-    font-weight: bold;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
     display: block;
 }
 
-/* Botones en el reverso para docentes y compañeros */
+/* Enlaces y botones dentro del reverso */
 .back-links {
     display: flex;
     flex-direction: column;
     gap: 8px;
     width: 100%;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 
 .flip-card-back a {
-    color: #78350f;
+    color: var(--primary-color);
     text-decoration: none;
-    font-weight: bold;
-    background: #fef9c3;
-    padding: 7px 14px;
+    font-weight: 600;
+    background: var(--accent-light);
+    padding: 8px 16px;
     border-radius: 20px;
-    border: 1.5px solid #d97706;
+    border: 1px solid var(--border-subtle);
     font-size: 0.82rem;
-    transition: 0.3s;
-    width: 85%;
+    transition: all 0.25s ease;
+    width: 90%;
     text-align: center;
 }
 
 .flip-card-back a:hover {
-    background: #d97706;
+    background: var(--accent-color);
     color: #ffffff;
+    border-color: var(--accent-color);
 }
 
-/* Ajuste para pantallas de celular */
-@media (max-width: 600px) {
+/* Responsivo para celulares */
+@media (max-width: 768px) {
     .container {
         padding: 30px 20px;
+    }
+    h1 {
+        font-size: 1.6rem;
     }
 }
