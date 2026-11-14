@@ -100,17 +100,12 @@ h2 {
     margin-top: 15px;
 }
 
-/* --- EFECTO FLIP CARD ESTILO TUTORIAL (PERSPECTIVA Y BORDES REDONDEADOS) --- */
+/* --- TARJETAS GIRATORIAS (FLIP CARDS) --- */
 .flip-card {
     background-color: transparent;
-    height: 185px;
-    perspective: 2000px; /* Perspectiva profunda como en el video */
+    height: 310px; /* Altura perfecta para ver la foto y luego los botones al girar */
+    perspective: 2000px;
     cursor: pointer;
-}
-
-/* Tarjetas de docentes más altas y verticales (proporción tipo postal del video) */
-.flip-card.teacher-card {
-    height: 310px;
 }
 
 .flip-card-inner {
@@ -141,105 +136,16 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 24px;
+    padding: 20px;
     box-sizing: border-box;
     overflow: hidden;
 }
 
-/* Frente: Fondo BLANCO con borde AMARILLO OSCURO */
+/* FRENTE: Muestra la FOTO LIMPIA del docente */
 .flip-card-front {
     background: #ffffff;
     border: 2.5px solid #d97706;
-    color: #78350f;
-}
-
-.flip-card-front .role {
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-    color: #b45309;
-    display: block;
-    line-height: 1.35;
-}
-
-/* Línea separadora entre el curso y el nombre */
-.card-divider {
-    width: 50px;
-    border: 0;
-    border-top: 2px solid #d97706;
-    margin: 12px auto;
-}
-
-.flip-card-front .name {
-    font-size: 1.15rem;
-    font-weight: bold;
-    display: block;
-}
-
-/* Botones en el frente de las tarjetas de docentes */
-.front-links {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 16px;
-    width: 100%;
-    align-items: center;
-}
-
-.front-links a {
-    color: #78350f;
-    text-decoration: none;
-    font-weight: bold;
-    background: #fef9c3;
-    padding: 7px 16px;
-    border-radius: 20px;
-    border: 1.5px solid #d97706;
-    font-size: 0.82rem;
-    transition: 0.3s;
-}
-
-.front-links a:hover {
-    background: #d97706;
-    color: #ffffff;
-}
-
-/* Reverso de las tarjetas de compañeros */
-.flip-card-back {
-    background: #fef9c3;
-    border: 2.5px solid #d97706;
-    color: #78350f;
-    transform: rotateY(180deg);
-}
-
-.flip-card-back p {
-    margin: 0 0 12px 0;
-    font-size: 0.95rem;
-    font-weight: 600;
-}
-
-.flip-card-back a {
-    color: #78350f;
-    text-decoration: none;
-    font-weight: bold;
-    background: #ffffff;
-    padding: 8px 18px;
-    border-radius: 20px;
-    border: 1.5px solid #d97706;
-    font-size: 0.85rem;
-    transition: 0.3s;
-}
-
-.flip-card-back a:hover {
-    background: #d97706;
-    color: #ffffff;
-}
-
-/* Reverso de las tarjetas de docentes: SOLO LA FOTO COMPLETA */
-.flip-card-back.photo-only {
     padding: 0;
-    background: #ffffff;
-    border: 2.5px solid #d97706;
 }
 
 .teacher-full-img {
@@ -248,4 +154,67 @@ h2 {
     object-fit: cover;
     object-position: center top;
     display: block;
+}
+
+/* REVERSO: Muestra la información del curso, nombre y los enlaces en fondo blanco con borde ámbar */
+.flip-card-back {
+    background: #ffffff;
+    border: 2.5px solid #d97706;
+    color: #78350f;
+    transform: rotateY(-180deg);
+    padding: 22px;
+}
+
+.flip-card-back .role {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #b45309;
+    display: block;
+    line-height: 1.35;
+}
+
+/* Línea separadora */
+.card-divider {
+    width: 45px;
+    border: 0;
+    border-top: 2px solid #d97706;
+    margin: 10px auto;
+}
+
+.flip-card-back .name {
+    font-size: 1.05rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* Botones en el reverso para hacerles clic cómodamente */
+.back-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.flip-card-back a {
+    color: #78350f;
+    text-decoration: none;
+    font-weight: bold;
+    background: #fef9c3;
+    padding: 7px 14px;
+    border-radius: 20px;
+    border: 1.5px solid #d97706;
+    font-size: 0.8rem;
+    transition: 0.3s;
+    width: 90%;
+    text-align: center;
+}
+
+.flip-card-back a:hover {
+    background: #d97706;
+    color: #ffffff;
 }
