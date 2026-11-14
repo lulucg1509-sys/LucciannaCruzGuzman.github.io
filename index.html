@@ -41,11 +41,37 @@
 </head>
 <body>
 
+<!-- PANTALLA DE CARGA INICIAL -->
+<div id="loader-screen">
+    <div class="loader-content">
+        <span class="loader-name">Luccianna Cruz</span>
+        <span class="loader-subtitle">PORTFOLIO LOADING</span>
+        <div class="loader-line-track">
+            <div class="loader-line-bar"></div>
+        </div>
+    </div>
+</div>
+
+<!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+<nav class="top-navbar">
+    <div class="nav-inner">
+        <a href="#inicio" class="nav-brand" onclick="filtrarSeccion('todo', event)">LUCCIANNA.</a>
+        <div class="nav-links">
+            <button class="nav-btn active" onclick="filtrarSeccion('todo', event)">Todo</button>
+            <button class="nav-btn" onclick="filtrarSeccion('sobre-mi', event)">Sobre mí</button>
+            <button class="nav-btn" onclick="filtrarSeccion('fortalezas', event)">Fortalezas</button>
+            <button class="nav-btn" onclick="filtrarSeccion('intereses', event)">Intereses</button>
+            <button class="nav-btn" onclick="filtrarSeccion('docentes', event)">Docentes</button>
+            <button class="nav-btn" onclick="filtrarSeccion('companeros', event)">Compañeros</button>
+        </div>
+    </div>
+</nav>
+
 <div class="bg-orb orb-1"></div>
 <div class="bg-orb orb-2"></div>
 
 <div class="container">
-    <header>
+    <header id="inicio">
         <div class="badge-top">Portafolio Académico & CV</div>
         
         <div class="profile-img-wrapper">
@@ -62,7 +88,7 @@
     </header>
 
     <!-- SOBRE MÍ -->
-    <section class="about-text">
+    <section id="sobre-mi" class="portfolio-section about-text">
         <div class="section-header">
             <span class="section-tag">01 / Presentación</span>
             <h2>Sobre mí</h2>
@@ -79,7 +105,7 @@
     </section>
 
     <!-- FORTALEZAS -->
-    <section>
+    <section id="fortalezas" class="portfolio-section">
         <div class="section-header">
             <span class="section-tag">02 / Habilidades</span>
             <h2>Mis Fortalezas</h2>
@@ -154,7 +180,7 @@
     </section>
 
     <!-- INTERESES -->
-    <section>
+    <section id="intereses" class="portfolio-section">
         <div class="section-header">
             <span class="section-tag">03 / Pasiones</span>
             <h2>Mis Intereses</h2>
@@ -234,7 +260,7 @@
     </section>
 
     <!-- PROFESORES -->
-    <section>
+    <section id="docentes" class="portfolio-section">
         <div class="section-header">
             <span class="section-tag">04 / Academia</span>
             <h2>Mis Profesores</h2>
@@ -276,8 +302,8 @@
         </div>
     </section>
 
-    <!-- COMPAÑEROS (CORREGIDO CON CAMILA, ÁNGELES Y CRISTIAN) -->
-    <section>
+    <!-- COMPAÑEROS -->
+    <section id="companeros" class="portfolio-section">
         <div class="section-header">
             <span class="section-tag">05 / Red Académica</span>
             <h2>Páginas de mis Compañeros</h2>
@@ -343,6 +369,57 @@
         <p>&copy; 2026 Luccianna Antonella Cruz Guzman &bull; Universidad Católica San Pablo</p>
     </footer>
 </div>
+
+<!-- SCRIPT PARA PANTALLA DE CARGA Y FILTRO DE SECCIONES -->
+<script>
+    // Desvanecer la pantalla de carga suavemente al abrir la página
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            const loader = document.getElementById('loader-screen');
+            loader.classList.add('hidden');
+        }, 1200);
+    });
+
+    // Mostrar solo la sección elegida en la barra superior (o todas en "Todo")
+    function filtrarSeccion(idSeccion, event) {
+        if (event) event.preventDefault();
+
+        // Actualizar botón activo en la barra superior
+        document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+        if (event && event.target.classList.contains('nav-btn')) {
+            event.target.classList.add('active');
+        } else {
+            document.querySelector('.nav-btn').classList.add('active');
+        }
+
+        const header = document.getElementById('inicio');
+        const secciones = document.querySelectorAll('.portfolio-section');
+
+        if (idSeccion === 'todo') {
+            header.style.display = 'block';
+            secciones.forEach(sec => {
+                sec.style.display = 'block';
+                sec.classList.remove('fade-in-section');
+                void sec.offsetWidth;
+                sec.classList.add('fade-in-section');
+            });
+        } else {
+            header.style.display = 'none';
+            secciones.forEach(sec => {
+                if (sec.id === idSeccion) {
+                    sec.style.display = 'block';
+                    sec.classList.remove('fade-in-section');
+                    void sec.offsetWidth;
+                    sec.classList.add('fade-in-section');
+                } else {
+                    sec.style.display = 'none';
+                }
+            });
+        }
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
 
 </body>
 </html>
