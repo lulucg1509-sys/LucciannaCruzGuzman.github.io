@@ -1,23 +1,25 @@
-/* Configuración general de la página */
+/* Configuración general de la página (Fondo amarillo pastel) */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fffdf2;
     color: #423315;
     margin: 0;
-    padding: 30px 20px;
+    padding: 35px 20px;
     display: flex;
     justify-content: center;
 }
 
-/* Cuadro principal blanco */
+/* Cuadro principal blanco más amplio y adaptable en altura */
 .container {
-    max-width: 820px;
+    max-width: 920px;
     width: 100%;
+    height: auto;
     background: #ffffff;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 8px 24px rgba(217, 155, 0, 0.14);
+    padding: 45px 50px;
+    border-radius: 22px;
+    box-shadow: 0 8px 28px rgba(217, 155, 0, 0.14);
     border-top: 6px solid #f59e0b;
+    box-sizing: border-box;
 }
 
 /* Encabezado con foto y nombre */
@@ -74,7 +76,8 @@ h2 {
     color: #78350f;
     border-left: 5px solid #f59e0b;
     padding-left: 12px;
-    margin-top: 35px;
+    margin-top: 40px;
+    margin-bottom: 16px;
     font-size: 1.4rem;
 }
 
@@ -92,7 +95,7 @@ h2 {
     font-style: italic;
 }
 
-/* Cuadrícula para las tarjetas */
+/* --- CUADRÍCULA PARA TARJETAS GIRATORIAS --- */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -100,10 +103,26 @@ h2 {
     margin-top: 15px;
 }
 
-/* --- TARJETAS GIRATORIAS (FLIP CARDS) --- */
-.flip-card {
+/* Tarjetas de Fortalezas e Intereses (altura cómoda para leer la descripción al girar) */
+.flip-card.info-flip {
     background-color: transparent;
-    height: 310px; /* Altura perfecta para ver la foto y luego los botones al girar */
+    height: 195px;
+    perspective: 2000px;
+    cursor: pointer;
+}
+
+/* Tarjetas de docentes (altas para la foto limpia) */
+.flip-card.teacher-card {
+    background-color: transparent;
+    height: 310px;
+    perspective: 2000px;
+    cursor: pointer;
+}
+
+/* Tarjetas de compañeros (altura compacta) */
+.flip-card.peer-card {
+    background-color: transparent;
+    height: 165px;
     perspective: 2000px;
     cursor: pointer;
 }
@@ -141,11 +160,32 @@ h2 {
     overflow: hidden;
 }
 
-/* FRENTE: Muestra la FOTO LIMPIA del docente */
-.flip-card-front {
+/* FRENTE de Fortalezas e Intereses: Fondo blanco con borde ámbar y texto elegante */
+.flip-card.info-flip .flip-card-front {
+    background: #ffffff;
+    border: 2.5px solid #d97706;
+    color: #78350f;
+    padding: 22px;
+}
+
+/* Toque amarillo suave para los intereses en el frente */
+.flip-card.info-flip .interest-front {
+    background: #fffef7;
+}
+
+/* FRENTE: Foto limpia en docentes */
+.teacher-card .flip-card-front {
     background: #ffffff;
     border: 2.5px solid #d97706;
     padding: 0;
+}
+
+/* FRENTE en compañeros: Fondo blanco con borde amarillo oscuro */
+.peer-card .flip-card-front {
+    background: #ffffff;
+    border: 2.5px solid #d97706;
+    padding: 20px;
+    color: #78350f;
 }
 
 .teacher-full-img {
@@ -156,16 +196,35 @@ h2 {
     display: block;
 }
 
-/* REVERSO: Muestra la información del curso, nombre y los enlaces en fondo blanco con borde ámbar */
+/* REVERSO: Información y descripciones */
 .flip-card-back {
-    background: #ffffff;
+    background: #fef9c3;
     border: 2.5px solid #d97706;
     color: #78350f;
     transform: rotateY(-180deg);
     padding: 22px;
 }
 
-.flip-card-back .role {
+/* Reverso específico para tarjetas de información (Fortalezas e Intereses) con fondo blanco */
+.info-flip .flip-card-back {
+    background: #ffffff;
+    border: 2.5px solid #d97706;
+    color: #423315;
+    text-align: left;
+    padding: 22px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
+.info-flip .flip-card-back p {
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #423315;
+}
+
+.role {
     font-size: 0.78rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -183,14 +242,13 @@ h2 {
     margin: 10px auto;
 }
 
-.flip-card-back .name {
+.name {
     font-size: 1.05rem;
     font-weight: bold;
     display: block;
-    margin-bottom: 12px;
 }
 
-/* Botones en el reverso para hacerles clic cómodamente */
+/* Botones en el reverso para docentes y compañeros */
 .back-links {
     display: flex;
     flex-direction: column;
@@ -208,13 +266,20 @@ h2 {
     padding: 7px 14px;
     border-radius: 20px;
     border: 1.5px solid #d97706;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     transition: 0.3s;
-    width: 90%;
+    width: 85%;
     text-align: center;
 }
 
 .flip-card-back a:hover {
     background: #d97706;
     color: #ffffff;
+}
+
+/* Ajuste para pantallas de celular */
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+    }
 }
