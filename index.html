@@ -4,204 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Perfil Académico y CV - Luccianna Cruz</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fffdf2; /* Fondo general en amarillo crema muy suave */
-            color: #423315;
-            margin: 0;
-            padding: 30px 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        /* Cuadro principal contenedor */
-        .container {
-            max-width: 800px;
-            width: 100%;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(217, 155, 0, 0.14); /* Sombra suave en tono dorado */
-            border-top: 6px solid #f59e0b; /* Barra superior en amarillo ámbar */
-        }
-
-        header {
-            text-align: center;
-            border-bottom: 2px solid #fef3c7;
-            padding-bottom: 25px;
-        }
-
-        .profile-img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #f59e0b; /* Borde ámbar para la foto */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-            background-color: #fef9c3;
-        }
-
-        h1 {
-            margin: 15px 0 5px 0;
-            color: #78350f; /* Marrón dorado oscuro para el nombre */
-        }
-
-        .subtitle {
-            color: #b45309;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        /* Botones de redes sociales */
-        .social-links a {
-            display: inline-block;
-            margin: 0 5px;
-            padding: 8px 18px;
-            background-color: #fef9c3; /* Amarillo pastel */
-            color: #92400e;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 20px;
-            border: 1px solid #fde047;
-            transition: 0.3s;
-        }
-
-        .social-links a:hover {
-            background-color: #f59e0b;
-            color: #ffffff;
-            border-color: #f59e0b;
-        }
-
-        h2 {
-            color: #78350f;
-            border-left: 5px solid #f59e0b;
-            padding-left: 12px;
-            margin-top: 35px;
-            font-size: 1.4rem;
-        }
-
-        .about-text p {
-            line-height: 1.65;
-            text-align: justify;
-            margin-bottom: 12px;
-        }
-
-        .hint {
-            font-size: 0.85rem;
-            color: #a16207;
-            margin-top: -8px;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-
-        /* Cuadrícula para las tarjetas giratorias */
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 18px;
-            margin-top: 15px;
-        }
-
-        /* Contenedor con perspectiva 3D */
-        .flip-card {
-            background-color: transparent;
-            height: 140px;
-            perspective: 1000px;
-            cursor: pointer;
-        }
-
-        /* Contenedor interno que realiza el giro */
-        .flip-card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
-            transform-style: preserve-3d;
-        }
-
-        /* Gira al pasar el mouse o tocar en pantalla táctil */
-        .flip-card:hover .flip-card-inner,
-        .flip-card:focus-within .flip-card-inner {
-            transform: rotateY(180deg);
-        }
-
-        /* Estilos compartidos entre el frente y el reverso */
-        .flip-card-front, .flip-card-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            border-radius: 12px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 16px;
-            box-sizing: border-box;
-            box-shadow: 0 4px 10px rgba(180, 83, 9, 0.08);
-        }
-
-        /* Cara frontal de la tarjeta (Amarillo pastel suave) */
-        .flip-card-front {
-            background: #fef9c3;
-            border: 1.5px solid #fde047;
-            color: #78350f;
-        }
-
-        .flip-card-front .role {
-            font-size: 0.82rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: #b45309;
-            margin-bottom: 6px;
-        }
-
-        .flip-card-front .name {
-            font-size: 1.05rem;
-            font-weight: bold;
-        }
-
-        /* Cara trasera de la tarjeta (Amarillo cálido más intenso) */
-        .flip-card-back {
-            background: #fde68a;
-            border: 1.5px solid #f59e0b;
-            color: #78350f;
-            transform: rotateY(180deg);
-        }
-
-        .flip-card-back p {
-            margin: 0 0 12px 0;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .flip-card-back a {
-            color: #78350f;
-            text-decoration: none;
-            font-weight: bold;
-            background: #ffffff;
-            padding: 7px 16px;
-            border-radius: 20px;
-            border: 1px solid #d97706;
-            font-size: 0.88rem;
-            transition: 0.3s;
-        }
-
-        .flip-card-back a:hover {
-            background: #d97706;
-            color: #ffffff;
-        }
-    </style>
+    <!-- Enlace al archivo de estilos externo -->
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
 <div class="container">
     <header>
-        <!-- FOTO -->
+        <!-- FOTO: Asegúrate de que el nombre del archivo coincida con el que subas a GitHub -->
         <img src="Gemini_Generated_Image_4wwvn44wwvn44wwv.jpg" alt="Foto de Perfil de Luccianna" class="profile-img">
         
         <!-- 1. TU NOMBRE -->
@@ -210,7 +20,7 @@
         <!-- 2. TU CARRERA Y UNIVERSIDAD -->
         <p class="subtitle">Estudiante de Administración de Empresas en Universidad Católica San Pablo</p>
         
-        <!-- 3. ENLACES A TUS REDES (Reemplaza el # por tus enlaces personales) -->
+        <!-- 3. ENLACES A TUS REDES -->
         <div class="social-links">
             <a href="#" target="_blank">Mi LinkedIn</a>
             <a href="#" target="_blank">Mi GitHub</a>
