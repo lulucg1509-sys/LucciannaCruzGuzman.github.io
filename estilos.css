@@ -100,17 +100,17 @@ h2 {
     margin-top: 15px;
 }
 
-/* Tarjetas de compañeros (altura estándar) */
+/* Tarjetas base */
 .flip-card {
     background-color: transparent;
-    height: 150px;
+    height: 155px;
     perspective: 1000px;
     cursor: pointer;
 }
 
-/* Tarjetas de docentes (un poco más altas para que quepa su foto) */
+/* Tarjetas de docentes (un poco más altas para los botones) */
 .flip-card.teacher-card {
-    height: 225px;
+    height: 230px;
 }
 
 .flip-card-inner {
@@ -142,24 +142,14 @@ h2 {
     padding: 16px;
     box-sizing: border-box;
     box-shadow: 0 4px 10px rgba(180, 83, 9, 0.08);
+    overflow: hidden;
 }
 
-/* Frente de la tarjeta */
+/* Frente de la tarjeta: Fondo BLANCO con borde AMARILLO OSCURO */
 .flip-card-front {
-    background: #fef9c3;
-    border: 1.5px solid #fde047;
+    background: #ffffff;
+    border: 2px solid #d97706;
     color: #78350f;
-}
-
-/* Foto circular de cada docente */
-.teacher-img {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2.5px solid #f59e0b;
-    margin-bottom: 10px;
-    background-color: #ffffff;
 }
 
 .flip-card-front .role {
@@ -175,8 +165,8 @@ h2 {
 .card-divider {
     width: 45px;
     border: 0;
-    border-top: 1.5px solid #f59e0b;
-    margin: 7px auto;
+    border-top: 1.5px solid #d97706;
+    margin: 8px auto;
 }
 
 .flip-card-front .name {
@@ -185,10 +175,37 @@ h2 {
     display: block;
 }
 
-/* Reverso de la tarjeta */
+/* Botones en el frente de las tarjetas de docentes */
+.front-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 12px;
+    width: 100%;
+    align-items: center;
+}
+
+.front-links a {
+    color: #78350f;
+    text-decoration: none;
+    font-weight: bold;
+    background: #fef9c3;
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid #d97706;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.front-links a:hover {
+    background: #d97706;
+    color: #ffffff;
+}
+
+/* Reverso de las tarjetas de compañeros */
 .flip-card-back {
-    background: #fde68a;
-    border: 1.5px solid #f59e0b;
+    background: #fef9c3;
+    border: 2px solid #d97706;
     color: #78350f;
     transform: rotateY(180deg);
 }
@@ -197,14 +214,6 @@ h2 {
     margin: 0 0 12px 0;
     font-size: 0.9rem;
     font-weight: 600;
-}
-
-.back-links {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-    align-items: center;
 }
 
 .flip-card-back a {
@@ -222,4 +231,18 @@ h2 {
 .flip-card-back a:hover {
     background: #d97706;
     color: #ffffff;
+}
+
+/* Reverso de las tarjetas de docentes (SOLO FOTO COMPLETA) */
+.flip-card-back.photo-only {
+    padding: 0;
+    background: #ffffff;
+}
+
+.teacher-full-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
 }
