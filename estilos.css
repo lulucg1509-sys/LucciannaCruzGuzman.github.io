@@ -184,7 +184,7 @@ h2 {
     margin: 0 0 14px 0;
 }
 
-/* --- TARJETAS GIRATORIAS (CORREGIDAS Y AMPLIADAS) --- */
+/* --- TARJETAS GIRATORIAS --- */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
@@ -197,15 +197,15 @@ h2 {
     cursor: pointer;
 }
 
-/* Altura aumentada para los profesores para que quepan bien los botones */
 .flip-card.teacher-card {
     height: 340px;
     perspective: 2000px;
     cursor: pointer;
 }
 
+/* Altura optimizada para tarjetas de compañeros con dos botones */
 .flip-card.peer-card {
-    height: 195px;
+    height: 215px;
     perspective: 2000px;
     cursor: pointer;
 }
@@ -336,16 +336,16 @@ h2 {
     font-size: 0.95rem;
     font-weight: 700;
     color: var(--primary-brown);
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 
 .back-links {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 7px;
     width: 100%;
     align-items: center;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
 .flip-card-back a {
@@ -353,10 +353,10 @@ h2 {
     text-decoration: none;
     font-weight: 600;
     background: var(--amber-gold);
-    padding: 8px 16px;
+    padding: 7px 14px;
     border-radius: 20px;
     border: 1.5px solid var(--amber-gold);
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     transition: all 0.25s ease;
     width: 90%;
     text-align: center;
