@@ -1,7 +1,7 @@
 /* Configuración general de la página */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fffdf2; /* Fondo general amarillo crema muy suave */
+    background-color: #fffdf2;
     color: #423315;
     margin: 0;
     padding: 30px 20px;
@@ -17,7 +17,7 @@ body {
     padding: 40px;
     border-radius: 16px;
     box-shadow: 0 8px 24px rgba(217, 155, 0, 0.14);
-    border-top: 6px solid #f59e0b; /* Línea superior amarillo ámbar */
+    border-top: 6px solid #f59e0b;
 }
 
 /* Encabezado con foto y nombre */
@@ -28,11 +28,11 @@ header {
 }
 
 .profile-img {
-    width: 190px; /* Más grande (antes era 140px) */
-    height: 190px; /* Más grande (antes era 140px) */
+    width: 190px;
+    height: 190px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center 20%; /* Centra la imagen hacia tu rostro */
+    object-position: center 20%;
     border: 4px solid #f59e0b;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     background-color: #fef9c3;
@@ -92,7 +92,7 @@ h2 {
     font-style: italic;
 }
 
-/* Cuadrícula para las tarjetas de profesores y compañeros */
+/* Cuadrícula para las tarjetas */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -100,12 +100,17 @@ h2 {
     margin-top: 15px;
 }
 
-/* Estructura 3D para que las tarjetas giren */
+/* Tarjetas de compañeros (altura estándar) */
 .flip-card {
     background-color: transparent;
-    height: 140px;
+    height: 150px;
     perspective: 1000px;
     cursor: pointer;
+}
+
+/* Tarjetas de docentes (un poco más altas para que quepa su foto) */
+.flip-card.teacher-card {
+    height: 225px;
 }
 
 .flip-card-inner {
@@ -122,4 +127,99 @@ h2 {
     transform: rotateY(180deg);
 }
 
-/*
+/* Estilos compartidos de ambas caras */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(180, 83, 9, 0.08);
+}
+
+/* Frente de la tarjeta */
+.flip-card-front {
+    background: #fef9c3;
+    border: 1.5px solid #fde047;
+    color: #78350f;
+}
+
+/* Foto circular de cada docente */
+.teacher-img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2.5px solid #f59e0b;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+}
+
+.flip-card-front .role {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #b45309;
+    display: block;
+}
+
+/* Línea separadora entre el curso/rol y el nombre */
+.card-divider {
+    width: 45px;
+    border: 0;
+    border-top: 1.5px solid #f59e0b;
+    margin: 7px auto;
+}
+
+.flip-card-front .name {
+    font-size: 1.05rem;
+    font-weight: bold;
+    display: block;
+}
+
+/* Reverso de la tarjeta */
+.flip-card-back {
+    background: #fde68a;
+    border: 1.5px solid #f59e0b;
+    color: #78350f;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back p {
+    margin: 0 0 12px 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.back-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    align-items: center;
+}
+
+.flip-card-back a {
+    color: #78350f;
+    text-decoration: none;
+    font-weight: bold;
+    background: #ffffff;
+    padding: 7px 16px;
+    border-radius: 20px;
+    border: 1.5px solid #d97706;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.flip-card-back a:hover {
+    background: #d97706;
+    color: #ffffff;
+}
