@@ -8,8 +8,8 @@
     <meta name="google-site-verification" content="xnezKPAk1hd0A0kZuwHZs_VZd9duZXpxq5CxX6QaLAo" />
     
     <!-- SEO -->
-    <title>Luccianna Antonella Cruz Guzman | Perfil Académico y CV - UCSP</title>
-    <meta name="description" content="Perfil académico y currículum de Luccianna Antonella Cruz Guzman, estudiante de Administración de Empresas en la Universidad Católica San Pablo (UCSP), Arequipa.">
+    <title>Luccianna Antonella Cruz Guzman | Perfil Personal y CV - UCSP</title>
+    <meta name="description" content="Perfil personal y currículum de Luccianna Antonella Cruz Guzman, estudiante de Administración de Empresas en la Universidad Católica San Pablo (UCSP), Arequipa.">
     <meta name="keywords" content="Luccianna Antonella Cruz Guzman, Luccianna Cruz Guzman, Administración de Empresas, Universidad Católica San Pablo, UCSP, Arequipa, CV">
     <meta name="author" content="Luccianna Antonella Cruz Guzman">
     <meta name="robots" content="index, follow">
@@ -36,25 +36,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
 
-    <!-- Estilos -->
-    <link rel="stylesheet" href="estilos.css">
+    <!-- Estilos (con ?v=2 para forzar la actualización inmediata en el navegador) -->
+    <link rel="stylesheet" href="estilos.css?v=2">
 </head>
 <body>
 
 <!-- PANTALLA DE CARGA INICIAL -->
 <div id="loader-screen">
     <div class="loader-content">
-        <span class="loader-name">Luccianna Cruz</span>
-        <span class="loader-subtitle">PORTFOLIO LOADING</span>
+        <span class="loader-name">Luccianna Antonella Cruz Guzman</span>
+        <span class="loader-subtitle">CARGANDO PERFIL</span>
         <div class="loader-line-track">
             <div class="loader-line-bar"></div>
         </div>
     </div>
 </div>
 
-<!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+<!-- BARRA DE NAVEGACIÓN SUPERIOR TIPO CÁPSULA FLOTANTE -->
 <nav class="top-navbar">
-    <div class="nav-inner">
+    <div class="nav-pill">
         <a href="#inicio" class="nav-brand" onclick="filtrarSeccion('todo', event)">LUCCIANNA.</a>
         <div class="nav-links">
             <button class="nav-btn active" onclick="filtrarSeccion('todo', event)">Todo</button>
@@ -72,7 +72,7 @@
 
 <div class="container">
     <header id="inicio">
-        <div class="badge-top">Portafolio Académico & CV</div>
+        <div class="badge-top">Perfil Personal & CV</div>
         
         <div class="profile-img-wrapper">
             <img src="foto-perfil.jpg" alt="Foto de Perfil de Luccianna Antonella Cruz Guzman" class="profile-img">
@@ -310,7 +310,6 @@
             <p class="hint">Pasa el cursor sobre cada tarjeta para visitar su sitio web o LinkedIn.</p>
         </div>
         <div class="cards-grid">
-            <!-- Camila Rubina -->
             <div class="flip-card peer-card" tabindex="0">
                 <div class="flip-card-inner">
                     <div class="flip-card-front peer-front">
@@ -328,7 +327,6 @@
                 </div>
             </div>
 
-            <!-- Angeles Vilca -->
             <div class="flip-card peer-card" tabindex="0">
                 <div class="flip-card-inner">
                     <div class="flip-card-front peer-front">
@@ -345,7 +343,6 @@
                 </div>
             </div>
 
-            <!-- Cristian Colonio -->
             <div class="flip-card peer-card" tabindex="0">
                 <div class="flip-card-inner">
                     <div class="flip-card-front peer-front">
@@ -376,7 +373,7 @@
         setTimeout(() => {
             const loader = document.getElementById('loader-screen');
             loader.classList.add('hidden');
-        }, 1200);
+        }, 1400);
     });
 
     function filtrarSeccion(idSeccion, event) {
