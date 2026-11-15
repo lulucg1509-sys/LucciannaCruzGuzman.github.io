@@ -37,11 +37,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="estilos.css?v=4">
+    <link rel="stylesheet" href="estilos.css?v=5">
 </head>
 <body>
 
-<!-- PANTALLA DE CARGA CON ANIMACIÓN DE ABAJO HACIA ARRIBA -->
+<!-- PANTALLA DE CARGA CON TEXTOS QUE SUBEN DESDE ABAJO -->
 <div id="loader-screen">
     <div class="loader-content">
         <span class="loader-name">Luccianna Antonella Cruz Guzman</span>
@@ -55,7 +55,7 @@
 <!-- BARRA DE NAVEGACIÓN SUPERIOR CENTRADA -->
 <nav class="top-navbar">
     <div class="nav-pill">
-        <a href="#inicio" class="nav-brand" onclick="filtrarSeccion('todo', event)">LUCCIANNA</a>
+        <a href="#inicio" class="nav-brand" onclick="filtrarSeccion('todo', event)">LUCCIANNA CRUZ</a>
         <div class="nav-links">
             <button class="nav-btn active" onclick="filtrarSeccion('todo', event)">Todo</button>
             <button class="nav-btn" onclick="filtrarSeccion('sobre-mi', event)">Sobre mí</button>
@@ -71,7 +71,7 @@
 <div class="bg-orb orb-2"></div>
 
 <div class="container">
-    <header id="inicio">
+    <header id="inicio" class="reveal">
         <div class="badge-top">Perfil Personal & CV</div>
         
         <div class="profile-img-wrapper">
@@ -88,7 +88,7 @@
     </header>
 
     <!-- SOBRE MÍ -->
-    <section id="sobre-mi" class="portfolio-section about-text">
+    <section id="sobre-mi" class="portfolio-section about-text reveal">
         <div class="section-header">
             <span class="section-tag">01 / Presentación</span>
             <h2>Sobre mí</h2>
@@ -105,14 +105,14 @@
     </section>
 
     <!-- FORTALEZAS -->
-    <section id="fortalezas" class="portfolio-section">
+    <section id="fortalezas" class="portfolio-section reveal">
         <div class="section-header">
             <span class="section-tag">02 / Habilidades</span>
             <h2>Mis Fortalezas</h2>
             <p class="hint">Pasa el cursor sobre cada tarjeta para descubrir más.</p>
         </div>
         <div class="cards-grid">
-            <div class="flip-card info-flip" tabindex="0">
+            <div class="flip-card info-flip reveal" tabindex="0">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <span class="card-number">01</span>
@@ -125,7 +125,7 @@
                 </div>
             </div>
 
-            <div class="flip-card info-flip" tabindex="0">
+            <div class="flip-card info-flip reveal" tabindex="0">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <span class="card-number">02</span>
@@ -138,7 +138,7 @@
                 </div>
             </div>
 
-            <div class="flip-card info-flip" tabindex="0">
+            <div class="flip-card info-flip reveal" tabindex="0">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <span class="card-number">03</span>
@@ -151,7 +151,7 @@
                 </div>
             </div>
 
-            <div class="flip-card info-flip" tabindex="0">
+            <div class="flip-card info-flip reveal" tabindex="0">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <span class="card-number">04</span>
@@ -164,7 +164,7 @@
                 </div>
             </div>
 
-            <div class="flip-card info-flip" tabindex="0">
+            <div class="flip-card info-flip reveal" tabindex="0">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <span class="card-number">05</span>
@@ -180,14 +180,14 @@
     </section>
 
     <!-- INTERESES -->
-    <section id="intereses" class="portfolio-section">
+    <section id="intereses" class="portfolio-section reveal">
         <div class="section-header">
             <span class="section-tag">03 / Pasiones</span>
             <h2>Mis Intereses</h2>
             <p class="hint">Pasa el cursor sobre cada tarjeta para explorar mis pasatiempos.</p>
         </div>
         <div class="cards-grid">
-            <div class="flip-card info-flip" tabindex="0">
+            <div class="flip-card info-flip reveal" tabindex="0">
                 <div class="flip-card-inner">
                     <div class="flip-card-front interest-front">
                         <span class="role">Ámbito personal</span>
@@ -201,7 +201,7 @@
                 </div>
             </div>
 
-            <div class="flip-card info-flip" tabindex="0">
+            <div class="flip-card info-flip reveal" tabindex="0">
                 <div class="flip-card-inner">
                     <div class="flip-card-front interest-front">
                         <span class="role">Ámbito personal</span>
@@ -215,7 +215,7 @@
                 </div>
             </div>
 
-            <div class="flip-card info-flip" tabindex="0">
+            <div class="flip-card info-flip reveal" tabindex="0">
                 <div class="flip-card-inner">
                     <div class="flip-card-front interest-front">
                         <span class="role">Ámbito personal</span>
@@ -229,7 +229,7 @@
                 </div>
             </div>
 
-            <div class="flip-card info-flip" tabindex="0">
+            <div class="flip-card info-flip reveal" tabindex="0">
                 <div class="flip-card-inner">
                     <div class="flip-card-front interest-front">
                         <span class="role">Ámbito personal</span>
@@ -243,7 +243,7 @@
                 </div>
             </div>
 
-            <div class="flip-card info-flip" tabindex="0">
+            <div class="flip-card info-flip reveal" tabindex="0">
                 <div class="flip-card-inner">
                     <div class="flip-card-front interest-front">
                         <span class="role">Ámbito personal</span>
@@ -252,7 +252,7 @@
                         <span class="tap-hint">Ver detalle &rarr;</span>
                     </div>
                     <div class="flip-card-back">
-                        <p>Me gusta leer mangas o manhwas y explorar diferentes historias, estilos de ilustración, personajes y universos narrativos.</p>
+                        <p>Me gusta leer mangas o manhwas y explorar differentes historias, estilos de ilustración, personajes y universos narrativos.</p>
                     </div>
                 </div>
             </div>
@@ -260,14 +260,14 @@
     </section>
 
     <!-- PROFESORES -->
-    <section id="docentes" class="portfolio-section">
+    <section id="docentes" class="portfolio-section reveal">
         <div class="section-header">
             <span class="section-tag">04 / Academia</span>
             <h2>Mis Profesores</h2>
             <p class="hint">Pasa el cursor sobre la foto para ver el curso y sus enlaces.</p>
         </div>
         <div class="cards-grid">
-            <div class="flip-card teacher-card" tabindex="0">
+            <div class="flip-card teacher-card reveal" tabindex="0">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img src="foto-perfil-docente-ernesto.png" alt="Ernesto Cuadros Vargas" class="teacher-full-img">
@@ -284,7 +284,7 @@
                 </div>
             </div>
 
-            <div class="flip-card teacher-card" tabindex="0">
+            <div class="flip-card teacher-card reveal" tabindex="0">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img src="foto-perfil-docente-claudia.png" alt="Claudia Mabel Calisaya Carpio" class="teacher-full-img">
@@ -303,14 +303,14 @@
     </section>
 
     <!-- COMPAÑEROS -->
-    <section id="companeros" class="portfolio-section">
+    <section id="companeros" class="portfolio-section reveal">
         <div class="section-header">
             <span class="section-tag">05 / Red Académica</span>
             <h2>Páginas de mis Compañeros</h2>
             <p class="hint">Pasa el cursor sobre cada tarjeta para visitar su sitio web o LinkedIn.</p>
         </div>
         <div class="cards-grid">
-            <div class="flip-card peer-card" tabindex="0">
+            <div class="flip-card peer-card reveal" tabindex="0">
                 <div class="flip-card-inner">
                     <div class="flip-card-front peer-front">
                         <span class="role">Compañera</span>
@@ -327,7 +327,7 @@
                 </div>
             </div>
 
-            <div class="flip-card peer-card" tabindex="0">
+            <div class="flip-card peer-card reveal" tabindex="0">
                 <div class="flip-card-inner">
                     <div class="flip-card-front peer-front">
                         <span class="role">Compañera</span>
@@ -343,7 +343,7 @@
                 </div>
             </div>
 
-            <div class="flip-card peer-card" tabindex="0">
+            <div class="flip-card peer-card reveal" tabindex="0">
                 <div class="flip-card-inner">
                     <div class="flip-card-front peer-front">
                         <span class="role">Compañero</span>
@@ -362,20 +362,42 @@
         </div>
     </section>
 
-    <footer>
+    <footer class="reveal">
         <p>&copy; 2026 Luccianna Antonella Cruz Guzman &bull; Universidad Católica San Pablo</p>
     </footer>
 </div>
 
-<!-- SCRIPT PARA PANTALLA DE CARGA Y FILTRO DE SECCIONES -->
+<!-- SCRIPT PARA CARGA, ANIMACIONES AL HACER SCROLL Y FILTROS -->
 <script>
+    // Pantalla de carga inicial
     window.addEventListener('load', () => {
         setTimeout(() => {
             const loader = document.getElementById('loader-screen');
             loader.classList.add('hidden');
+            activarAnimacionesScroll();
         }, 1500);
     });
 
+    // Función para activar el efecto de aparición al hacer scroll
+    function activarAnimacionesScroll() {
+        const reveals = document.querySelectorAll('.reveal');
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.12
+        });
+
+        reveals.forEach(element => {
+            observer.observe(element);
+        });
+    }
+
+    // Filtrar o mostrar secciones individuales desde la barra superior
     function filtrarSeccion(idSeccion, event) {
         if (event) event.preventDefault();
 
@@ -391,20 +413,24 @@
 
         if (idSeccion === 'todo') {
             header.style.display = 'block';
+            header.classList.add('active');
             secciones.forEach(sec => {
                 sec.style.display = 'block';
-                sec.classList.remove('fade-in-section');
-                void sec.offsetWidth;
-                sec.classList.add('fade-in-section');
+                sec.classList.add('active');
             });
         } else {
             header.style.display = 'none';
             secciones.forEach(sec => {
                 if (sec.id === idSeccion) {
                     sec.style.display = 'block';
-                    sec.classList.remove('fade-in-section');
+                    // Forzar activación inmediata de la animación al cambiar de pestaña
+                    sec.classList.remove('active');
                     void sec.offsetWidth;
-                    sec.classList.add('fade-in-section');
+                    sec.classList.add('active');
+                    
+                    // Activar también las tarjetas internas de esa sección
+                    sec.querySelectorAll('.reveal').card?.classList.add('active');
+                    sec.querySelectorAll('.reveal').forEach(card => card.classList.add('active'));
                 } else {
                     sec.style.display = 'none';
                 }
