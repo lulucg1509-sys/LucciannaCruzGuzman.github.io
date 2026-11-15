@@ -1,4 +1,4 @@
-/* --- ESTILO EDITORIAL CÁLIDO + ANIMACIÓN DE CARGA SUAVE --- */
+/* --- ESTILO EDITORIAL CÁLIDO + ANIMACIONES DE APARICIÓN AL HACER SCROLL --- */
 :root {
     --bg-base: #fcf8ee;
     --card-surface: rgba(255, 255, 255, 0.94);
@@ -21,6 +21,19 @@ body {
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
+}
+
+/* --- EFECTO DE APARICIÓN AL HACER SCROLL (SCROLL REVEAL) --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* --- PANTALLA DE CARGA CON TEXTOS QUE SUBEN DESDE ABAJO --- */
@@ -182,21 +195,6 @@ body {
     color: var(--primary-brown);
     font-weight: 700;
     background: var(--amber-soft);
-}
-
-.fade-in-section {
-    animation: fadeInUp 0.45s ease forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .bg-orb {
