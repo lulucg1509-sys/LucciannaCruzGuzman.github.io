@@ -15,7 +15,7 @@ body {
     background-color: var(--bg-base);
     color: var(--text-main);
     margin: 0;
-    padding: 95px 20px 45px 20px; /* Espacio superior para la barra fija */
+    padding: 95px 20px 45px 20px;
     display: flex;
     justify-content: center;
     min-height: 100vh;
@@ -92,7 +92,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(252, 248, 238, 0.88);
+    background: rgba(252, 248, 238, 0.92);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border-gold);
@@ -150,7 +150,6 @@ body {
     border: 1px solid var(--border-gold);
 }
 
-/* Animación suave al cambiar de pestaña */
 .fade-in-section {
     animation: fadeInUp 0.45s ease forwards;
 }
@@ -166,7 +165,6 @@ body {
     }
 }
 
-/* Orbes decorativos */
 .bg-orb {
     position: fixed;
     border-radius: 50%;
@@ -288,7 +286,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Quitar margen extra arriba cuando la sección se ve sola */
 .portfolio-section:first-of-type .section-header {
     margin-top: 10px;
 }
