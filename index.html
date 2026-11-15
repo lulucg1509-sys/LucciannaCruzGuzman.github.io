@@ -36,12 +36,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
 
-    <!-- Estilos actualizados con v=6 para forzar la recarga -->
-    <link rel="stylesheet" href="estilos.css?v=6">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="estilos.css?v=7">
 </head>
 <body>
 
-<!-- PANTALLA DE CARGA INICIAL -->
+<!-- PANTALLA DE CARGA CON DOBLE C Y DOBLE N -->
 <div id="loader-screen">
     <div class="loader-content">
         <span class="loader-name">Luccianna Antonella Cruz Guzman</span>
@@ -52,7 +52,7 @@
     </div>
 </div>
 
-<!-- BARRA DE NAVEGACIÓN SUPERIOR CON "LUCIANA" -->
+<!-- BARRA DE NAVEGACIÓN SUPERIOR CON "LUCCIANNA" -->
 <nav class="top-navbar">
     <div class="nav-pill">
         <a href="#inicio" class="nav-brand" onclick="filtrarSeccion('todo', event)">LUCCIANNA</a>
@@ -70,109 +70,118 @@
 <div class="bg-orb orb-1"></div>
 <div class="bg-orb orb-2"></div>
 
-<div class="container">
-    <header id="inicio" class="reveal">
-        <div class="badge-top">Perfil Personal & CV</div>
-        
-        <div class="profile-img-wrapper">
-            <img src="foto-perfil.jpg" alt="Foto de Perfil de Luccianna Antonella Cruz Guzman" class="profile-img">
-        </div>
-        
-        <h1>Luccianna Antonella Cruz Guzman</h1>
-        <p class="subtitle">Estudiante de Administración de Empresas &bull; Universidad Católica San Pablo</p>
-        
-        <div class="social-links">
-            <a href="#" target="_blank">Mi LinkedIn</a>
-            <a href="https://github.com/lulucg1509-sys" target="_blank">Mi GitHub</a>
+<div class="timeline-container">
+    <div class="timeline-line"></div>
+
+    <!-- INICIO / CABECERA -->
+    <header id="inicio" class="timeline-section reveal">
+        <div class="timeline-dot"></div>
+        <div class="card-box">
+            <div class="badge-top">Perfil Personal & CV</div>
+            <div class="profile-img-wrapper">
+                <img src="foto-perfil.jpg" alt="Foto de Perfil de Luccianna Antonella Cruz Guzman" class="profile-img">
+            </div>
+            <h1>Luccianna Antonella Cruz Guzman</h1>
+            <p class="subtitle">Estudiante de Administración de Empresas &bull; Universidad Católica San Pablo</p>
+            <div class="social-links">
+                <a href="#" target="_blank">Mi LinkedIn</a>
+                <a href="https://github.com/lulucg1509-sys" target="_blank">Mi GitHub</a>
+            </div>
         </div>
     </header>
 
     <!-- SOBRE MÍ -->
-    <section id="sobre-mi" class="portfolio-section about-text reveal">
-        <div class="section-header">
-            <span class="section-tag">01 / Presentación</span>
-            <h2>Sobre mí</h2>
-        </div>
-        <div class="about-card">
-            <p>¡Hola! Soy <strong>Luccianna Antonella Cruz Guzman</strong>, estudiante de <strong>Administración de Empresas</strong> en la Universidad Católica San Pablo, con una personalidad curiosa, creativa y orientada al aprendizaje constante. Me interesa explorar nuevas ideas, desarrollar habilidades y encontrar diferentes maneras de transformar mi creatividad en proyectos y experiencias.</p>
+    <section id="sobre-mi" class="portfolio-section timeline-section reveal">
+        <div class="timeline-dot"></div>
+        <div class="card-box about-text">
+            <div class="section-header">
+                <span class="section-tag">01 / Presentación</span>
+                <h2>Sobre mí</h2>
+            </div>
+            <div class="about-card">
+                <p>¡Hola! Soy <strong>Luccianna Antonella Cruz Guzman</strong>, estudiante de <strong>Administración de Empresas</strong> en la Universidad Católica San Pablo, con una personalidad curiosa, creativa y orientada al aprendizaje constante. Me interesa explorar nuevas ideas, desarrollar habilidades y encontrar differentes maneras de transformar mi creatividad en proyectos y experiencias.</p>
 
-            <p>Me considero una persona con diversos intereses, especialmente en el ámbito artístico y cultural. La música ocupa un lugar importante en mi vida, desde escuchar distintos géneros musicales hasta explorar la guitarra como medio de expresión. También disfruto de la lectura, las historias y los universos creativos, actividades que alimentan mi imaginación y despiertan mi curiosidad por conocer nuevas perspectivas.</p>
+                <p>Me considero una persona con diversos intereses, especialmente en el ámbito artístico y cultural. La música ocupa un lugar importante en mi vida, desde escuchar distintos géneros musicales hasta explorar la guitarra como medio de expresión. También disfruto de la lectura, las historias y los universos creativos, actividades que alimentan mi imaginación y despiertan mi curiosidad por conocer nuevas perspectivas.</p>
 
-            <p>En el ámbito académico, tengo especial interés por áreas como el marketing, la creatividad empresarial y el desarrollo de proyectos. Disfruto participar en actividades que implican proponer ideas, trabajar en equipo y buscar soluciones, especialmente cuando puedo aportar un enfoque original. Considero que cada experiencia representa una oportunidad para aprender, mejorar y descubrir nuevas capacidades.</p>
+                <p>En el ámbito académico, tengo especial interés por áreas como el marketing, la creatividad empresarial y el desarrollo de proyectos. Disfruto participar en actividades que implican proponer ideas, trabajar en equipo y buscar soluciones, especialmente cuando puedo aportar un enfoque original. Considero que cada experiencia representa una oportunidad para aprender, mejorar y descubrir nuevas capacidades.</p>
 
-            <p>Me caracterizo por mantener una mentalidad abierta y por mi interés en conocer differentes culturas, tendencias y formas de expresión. Busco seguir desarrollándome tanto personal como profesionalmente, combinando mis conocimientos en gestión empresarial con mi creatividad, iniciativa y disposición para asumir nuevos retos.</p>
+                <p>Me caracterizo por mantener una mentalidad abierta y por mi interés en conocer differentes culturas, tendencias y formas de expresión. Busco seguir desarrollándome tanto personal como profesionalmente, combinando mis conocimientos en gestión empresarial con mi creatividad, iniciativa y disposición para asumir nuevos retos.</p>
+            </div>
         </div>
     </section>
 
     <!-- FORTALEZAS -->
-    <section id="fortalezas" class="portfolio-section reveal">
-        <div class="section-header">
-            <span class="section-tag">02 / Habilidades</span>
-            <h2>Mis Fortalezas</h2>
-            <p class="hint">Pasa el cursor sobre cada tarjeta para descubrir más.</p>
-        </div>
-        <div class="cards-grid">
-            <div class="flip-card info-flip reveal" tabindex="0">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <span class="card-number">01</span>
-                        <span class="name">Creatividad</span>
-                        <span class="tap-hint">Ver detalle &rarr;</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>Capacidad para generar ideas originales, explorar conceptos y encontrar diferentes formas de expresar y desarrollar proyectos.</p>
+    <section id="fortalezas" class="portfolio-section timeline-section reveal">
+        <div class="timeline-dot"></div>
+        <div class="card-box">
+            <div class="section-header">
+                <span class="section-tag">02 / Habilidades</span>
+                <h2>Mis Fortalezas</h2>
+                <p class="hint">Pasa el cursor sobre cada tarjeta para descubrir más.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="flip-card info-flip" tabindex="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="card-number">01</span>
+                            <span class="name">Creatividad</span>
+                            <span class="tap-hint">Ver detalle &rarr;</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Capacidad para generar ideas originales, explorar conceptos y encontrar differentes formas de expresar y desarrollar proyectos.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="flip-card info-flip reveal" tabindex="0">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <span class="card-number">02</span>
-                        <span class="name">Curiosidad y aprendizaje continuo</span>
-                        <span class="tap-hint">Ver detalle &rarr;</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>Interés por descubrir nuevos temas, adquirir conocimientos y explorar differentes perspectivas.</p>
+                <div class="flip-card info-flip" tabindex="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="card-number">02</span>
+                            <span class="name">Curiosidad y aprendizaje continuo</span>
+                            <span class="tap-hint">Ver detalle &rarr;</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Interés por descubrir nuevos temas, adquirir conocimientos y explorar differentes perspectivas.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="flip-card info-flip reveal" tabindex="0">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <span class="card-number">03</span>
-                        <span class="name">Pensamiento analítico</span>
-                        <span class="tap-hint">Ver detalle &rarr;</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>Capacidad para observar, interpretar y profundizar en differentes situaciones, buscando comprender más allá de lo evidente.</p>
+                <div class="flip-card info-flip" tabindex="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="card-number">03</span>
+                            <span class="name">Pensamiento analítico</span>
+                            <span class="tap-hint">Ver detalle &rarr;</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Capacidad para observar, interpretar y profundizar en differentes situaciones, buscando comprender más allá de lo evidente.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="flip-card info-flip reveal" tabindex="0">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <span class="card-number">04</span>
-                        <span class="name">Atención al detalle</span>
-                        <span class="tap-hint">Ver detalle &rarr;</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>Interés por cuidar la presentación, los conceptos y los pequeños elementos que permiten conseguir un resultado bien elaborado.</p>
+                <div class="flip-card info-flip" tabindex="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="card-number">04</span>
+                            <span class="name">Atención al detalle</span>
+                            <span class="tap-hint">Ver detalle &rarr;</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Interés por cuidar la presentación, los conceptos y los pequeños elementos que permiten conseguir un resultado bien elaborado.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="flip-card info-flip reveal" tabindex="0">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <span class="card-number">05</span>
-                        <span class="name">Adaptabilidad</span>
-                        <span class="tap-hint">Ver detalle &rarr;</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>Disposición para experimentar con nuevas actividades, aprender habilidades y desenvolverse en differentes entornos y situaciones.</p>
+                <div class="flip-card info-flip" tabindex="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="card-number">05</span>
+                            <span class="name">Adaptabilidad</span>
+                            <span class="tap-hint">Ver detalle &rarr;</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Disposición para experimentar con nuevas actividades, aprender habilidades y desenvolverse en differentes entornos y situaciones.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -180,79 +189,82 @@
     </section>
 
     <!-- INTERESES -->
-    <section id="intereses" class="portfolio-section reveal">
-        <div class="section-header">
-            <span class="section-tag">03 / Pasiones</span>
-            <h2>Mis Intereses</h2>
-            <p class="hint">Pasa el cursor sobre cada tarjeta para explorar mis pasatiempos.</p>
-        </div>
-        <div class="cards-grid">
-            <div class="flip-card info-flip reveal" tabindex="0">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front interest-front">
-                        <span class="role">Ámbito personal</span>
-                        <div class="card-line"></div>
-                        <span class="name">Música</span>
-                        <span class="tap-hint">Ver detalle &rarr;</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>Disfruto escuchar música, especialmente géneros como indie, alternative y sonidos chill o relajantes. Me gusta descubrir canciones y artistas nuevos.</p>
+    <section id="intereses" class="portfolio-section timeline-section reveal">
+        <div class="timeline-dot"></div>
+        <div class="card-box">
+            <div class="section-header">
+                <span class="section-tag">03 / Pasiones</span>
+                <h2>Mis Intereses</h2>
+                <p class="hint">Pasa el cursor sobre cada tarjeta para explorar mis pasatiempos.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="flip-card info-flip" tabindex="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front interest-front">
+                            <span class="role">Ámbito personal</span>
+                            <div class="card-line"></div>
+                            <span class="name">Música</span>
+                            <span class="tap-hint">Ver detalle &rarr;</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Disfruto escuchar música, especialmente géneros como indie, alternative y sonidos chill o relajantes. Me gusta descubrir canciones y artistas nuevos.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="flip-card info-flip reveal" tabindex="0">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front interest-front">
-                        <span class="role">Ámbito personal</span>
-                        <div class="card-line"></div>
-                        <span class="name">Arte y expresión creativa</span>
-                        <span class="tap-hint">Ver detalle &rarr;</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>Me interesa la pintura, las actividades artísticas y las manualidades. Últimamente he explorado el trabajo con cerámica y la creación de piezas.</p>
+                <div class="flip-card info-flip" tabindex="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front interest-front">
+                            <span class="role">Ámbito personal</span>
+                            <div class="card-line"></div>
+                            <span class="name">Arte y expresión creativa</span>
+                            <span class="tap-hint">Ver detalle &rarr;</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Me interesa la pintura, las actividades artísticas y las manualidades. Últimamente he explorado el trabajo con cerámica y la creación de piezas.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="flip-card info-flip reveal" tabindex="0">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front interest-front">
-                        <span class="role">Ámbito personal</span>
-                        <div class="card-line"></div>
-                        <span class="name">Series y películas</span>
-                        <span class="tap-hint">Ver detalle &rarr;</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>Me gustan los géneros de fantasía, romance, misterio y terror. Disfruto analizar las historias, los personajes, sus motivaciones y los detalles que se esconden detrás de cada trama.</p>
+                <div class="flip-card info-flip" tabindex="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front interest-front">
+                            <span class="role">Ámbito personal</span>
+                            <div class="card-line"></div>
+                            <span class="name">Series y películas</span>
+                            <span class="tap-hint">Ver detalle &rarr;</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Me gustan los géneros de fantasía, romance, misterio y terror. Disfruto analizar las historias, los personajes, sus motivaciones y los detalles que se esconden detrás de cada trama.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="flip-card info-flip reveal" tabindex="0">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front interest-front">
-                        <span class="role">Ámbito personal</span>
-                        <div class="card-line"></div>
-                        <span class="name">Videojuegos</span>
-                        <span class="tap-hint">Ver detalle &rarr;</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>Disfruto los videojuegos, especialmente los competitivos y de acción. Entre mis favoritos están Valorant y la saga Resident Evil.</p>
+                <div class="flip-card info-flip" tabindex="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front interest-front">
+                            <span class="role">Ámbito personal</span>
+                            <div class="card-line"></div>
+                            <span class="name">Videojuegos</span>
+                            <span class="tap-hint">Ver detalle &rarr;</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Disfruto los videojuegos, especialmente los competitivos y de acción. Entre mis favoritos están Valorant y la saga Resident Evil.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="flip-card info-flip reveal" tabindex="0">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front interest-front">
-                        <span class="role">Ámbito personal</span>
-                        <div class="card-line"></div>
-                        <span class="name">Lectura</span>
-                        <span class="tap-hint">Ver detalle &rarr;</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>Me gusta leer mangas o manhwas y explorar differentes historias, estilos de ilustración, personajes y universos narrativos.</p>
+                <div class="flip-card info-flip" tabindex="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front interest-front">
+                            <span class="role">Ámbito personal</span>
+                            <div class="card-line"></div>
+                            <span class="name">Lectura</span>
+                            <span class="tap-hint">Ver detalle &rarr;</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Me gusta leer mangas o manhwas y explorar differentes historias, estilos de ilustración, personajes y universos narrativos.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -260,41 +272,44 @@
     </section>
 
     <!-- PROFESORES -->
-    <section id="docentes" class="portfolio-section reveal">
-        <div class="section-header">
-            <span class="section-tag">04 / Academia</span>
-            <h2>Mis Profesores</h2>
-            <p class="hint">Pasa el cursor sobre la foto para ver el curso y sus enlaces.</p>
-        </div>
-        <div class="cards-grid">
-            <div class="flip-card teacher-card reveal" tabindex="0">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="foto-perfil-docente-ernesto.png" alt="Ernesto Cuadros Vargas" class="teacher-full-img">
-                    </div>
-                    <div class="flip-card-back">
-                        <span class="role">Introducción a la Computación</span>
-                        <div class="card-line"></div>
-                        <span class="name">Ernesto Cuadros Vargas</span>
-                        <div class="back-links">
-                            <a href="https://socios.spc.org.pe/ecuadros/" target="_blank">Página Web del Profesor</a>
-                            <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank" class="btn-secondary">LinkedIn</a>
+    <section id="docentes" class="portfolio-section timeline-section reveal">
+        <div class="timeline-dot"></div>
+        <div class="card-box">
+            <div class="section-header">
+                <span class="section-tag">04 / Academia</span>
+                <h2>Mis Profesores</h2>
+                <p class="hint">Pasa el cursor sobre la foto para ver el curso y sus enlaces.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="flip-card teacher-card" tabindex="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="foto-perfil-docente-ernesto.png" alt="Ernesto Cuadros Vargas" class="teacher-full-img">
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="role">Introducción a la Computación</span>
+                            <div class="card-line"></div>
+                            <span class="name">Ernesto Cuadros Vargas</span>
+                            <div class="back-links">
+                                <a href="https://socios.spc.org.pe/ecuadros/" target="_blank">Página Web del Profesor</a>
+                                <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank" class="btn-secondary">LinkedIn</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="flip-card teacher-card reveal" tabindex="0">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="foto-perfil-docente-claudia.png" alt="Claudia Mabel Calisaya Carpio" class="teacher-full-img">
-                    </div>
-                    <div class="flip-card-back">
-                        <span class="role">Desarrollo de Habilidades Para el Trabajo en Equipo</span>
-                        <div class="card-line"></div>
-                        <span class="name">Claudia Mabel Calisaya Carpio</span>
-                        <div class="back-links">
-                            <a href="http://www.linkedin.com/in/claudia-calisaya-carpio-5821a3" target="_blank">LinkedIn</a>
+                <div class="flip-card teacher-card" tabindex="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="foto-perfil-docente-claudia.png" alt="Claudia Mabel Calisaya Carpio" class="teacher-full-img">
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="role">Desarrollo de Habilidades Para el Trabajo en Equipo</span>
+                            <div class="card-line"></div>
+                            <span class="name">Claudia Mabel Calisaya Carpio</span>
+                            <div class="back-links">
+                                <a href="http://www.linkedin.com/in/claudia-calisaya-carpio-5821a3" target="_blank">LinkedIn</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -303,58 +318,61 @@
     </section>
 
     <!-- COMPAÑEROS -->
-    <section id="companeros" class="portfolio-section reveal">
-        <div class="section-header">
-            <span class="section-tag">05 / Red Académica</span>
-            <h2>Páginas de mis Compañeros</h2>
-            <p class="hint">Pasa el cursor sobre cada tarjeta para visitar su sitio web o LinkedIn.</p>
-        </div>
-        <div class="cards-grid">
-            <div class="flip-card peer-card reveal" tabindex="0">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front peer-front">
-                        <span class="role">Compañera</span>
-                        <div class="card-line"></div>
-                        <span class="name">Camila Rubina Salas</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <span class="back-title">Camila Rubina Salas</span>
-                        <div class="back-links">
-                            <a href="https://camilarubinasalas-crypto.github.io/Camila/" target="_blank">Sitio Web</a>
-                            <a href="https://www.linkedin.com/in/camila-alexandra-rubina-salas-037a02449?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="btn-secondary">LinkedIn</a>
+    <section id="companeros" class="portfolio-section timeline-section reveal">
+        <div class="timeline-dot"></div>
+        <div class="card-box">
+            <div class="section-header">
+                <span class="section-tag">05 / Red Académica</span>
+                <h2>Páginas de mis Compañeros</h2>
+                <p class="hint">Pasa el cursor sobre cada tarjeta para visitar su sitio web o LinkedIn.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="flip-card peer-card" tabindex="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front peer-front">
+                            <span class="role">Compañera</span>
+                            <div class="card-line"></div>
+                            <span class="name">Camila Rubina Salas</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="back-title">Camila Rubina Salas</span>
+                            <div class="back-links">
+                                <a href="https://camilarubinasalas-crypto.github.io/Camila/" target="_blank">Sitio Web</a>
+                                <a href="https://www.linkedin.com/in/camila-alexandra-rubina-salas-037a02449?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="btn-secondary">LinkedIn</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="flip-card peer-card reveal" tabindex="0">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front peer-front">
-                        <span class="role">Compañera</span>
-                        <div class="card-line"></div>
-                        <span class="name">Angeles Vilca Choque</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <span class="back-title">Angeles Vilca Choque</span>
-                        <div class="back-links">
-                            <a href="https://www.linkedin.com/in/angeles-gabriela-vilca-choque-53a967449?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="btn-secondary">LinkedIn</a>
+                <div class="flip-card peer-card" tabindex="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front peer-front">
+                            <span class="role">Compañera</span>
+                            <div class="card-line"></div>
+                            <span class="name">Angeles Vilca Choque</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="back-title">Angeles Vilca Choque</span>
+                            <div class="back-links">
+                                <a href="https://www.linkedin.com/in/angeles-gabriela-vilca-choque-53a967449?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="btn-secondary">LinkedIn</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="flip-card peer-card reveal" tabindex="0">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front peer-front">
-                        <span class="role">Compañero</span>
-                        <div class="card-line"></div>
-                        <span class="name">Cristian Colonio Cabala</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <span class="back-title">Cristian Colonio Cabala</span>
-                        <div class="back-links">
-                            <a href="https://coloniocl.github.io/ChristianColonio/" target="_blank">Sitio Web</a>
-                            <a href="https://www.linkedin.com/in/christian-colonio-633311436/" target="_blank" class="btn-secondary">LinkedIn</a>
+                <div class="flip-card peer-card" tabindex="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front peer-front">
+                            <span class="role">Compañero</span>
+                            <div class="card-line"></div>
+                            <span class="name">Cristian Colonio Cabala</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="back-title">Cristian Colonio Cabala</span>
+                            <div class="back-links">
+                                <a href="https://coloniocl.github.io/ChristianColonio/" target="_blank">Sitio Web</a>
+                                <a href="https://www.linkedin.com/in/christian-colonio-633311436/" target="_blank" class="btn-secondary">LinkedIn</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -362,12 +380,15 @@
         </div>
     </section>
 
-    <footer class="reveal">
-        <p>&copy; 2026 Luccianna Antonella Cruz Guzman &bull; Universidad Católica San Pablo</p>
+    <footer class="timeline-section reveal">
+        <div class="timeline-dot"></div>
+        <div class="card-box" style="text-align: center;">
+            <p>&copy; 2026 Luccianna Antonella Cruz Guzman &bull; Universidad Católica San Pablo</p>
+        </div>
     </footer>
 </div>
 
-<!-- SCRIPT PARA CARGA Y SCROLL REVEAL -->
+<!-- SCRIPT PARA CARGA, SCROLL REVEAL Y LÍNEA DE TIEMPO -->
 <script>
     window.addEventListener('load', () => {
         setTimeout(() => {
@@ -387,7 +408,7 @@
                 }
             });
         }, {
-            threshold: 0.1
+            threshold: 0.12
         });
 
         reveals.forEach(el => observer.observe(el));
@@ -405,22 +426,24 @@
 
         const header = document.getElementById('inicio');
         const secciones = document.querySelectorAll('.portfolio-section');
+        const foot = document.querySelector('footer');
 
         if (idSeccion === 'todo') {
             header.style.display = 'block';
             header.classList.add('active');
+            foot.style.display = 'block';
+            foot.classList.add('active');
             secciones.forEach(sec => {
                 sec.style.display = 'block';
                 sec.classList.add('active');
             });
         } else {
             header.style.display = 'none';
+            foot.style.display = 'none';
             secciones.forEach(sec => {
                 if (sec.id === idSeccion) {
                     sec.style.display = 'block';
-                    // Activar de inmediato al cambiar de pestaña
                     sec.classList.add('active');
-                    sec.querySelectorAll('.reveal').forEach(item => item.classList.add('active'));
                 } else {
                     sec.style.display = 'none';
                 }
