@@ -36,12 +36,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
 
-    <!-- Estilos -->
-    <link rel="stylesheet" href="estilos.css?v=5">
+    <!-- Estilos actualizados con v=6 para forzar la recarga -->
+    <link rel="stylesheet" href="estilos.css?v=6">
 </head>
 <body>
 
-<!-- PANTALLA DE CARGA CON TEXTOS QUE SUBEN DESDE ABAJO -->
+<!-- PANTALLA DE CARGA INICIAL -->
 <div id="loader-screen">
     <div class="loader-content">
         <span class="loader-name">Luccianna Antonella Cruz Guzman</span>
@@ -52,10 +52,10 @@
     </div>
 </div>
 
-<!-- BARRA DE NAVEGACIÓN SUPERIOR CENTRADA -->
+<!-- BARRA DE NAVEGACIÓN SUPERIOR CON "LUCIANA" -->
 <nav class="top-navbar">
     <div class="nav-pill">
-        <a href="#inicio" class="nav-brand" onclick="filtrarSeccion('todo', event)">LUCCIANNA CRUZ</a>
+        <a href="#inicio" class="nav-brand" onclick="filtrarSeccion('todo', event)">LUCIANA</a>
         <div class="nav-links">
             <button class="nav-btn active" onclick="filtrarSeccion('todo', event)">Todo</button>
             <button class="nav-btn" onclick="filtrarSeccion('sobre-mi', event)">Sobre mí</button>
@@ -100,7 +100,7 @@
 
             <p>En el ámbito académico, tengo especial interés por áreas como el marketing, la creatividad empresarial y el desarrollo de proyectos. Disfruto participar en actividades que implican proponer ideas, trabajar en equipo y buscar soluciones, especialmente cuando puedo aportar un enfoque original. Considero que cada experiencia representa una oportunidad para aprender, mejorar y descubrir nuevas capacidades.</p>
 
-            <p>Me caracterizo por mantener una mentalidad abierta y por mi interés en conocer diferentes culturas, tendencias y formas de expresión. Busco seguir desarrollándome tanto personal como profesionalmente, combinando mis conocimientos en gestión empresarial con mi creatividad, iniciativa y disposición para asumir nuevos retos.</p>
+            <p>Me caracterizo por mantener una mentalidad abierta y por mi interés en conocer differentes culturas, tendencias y formas de expresión. Busco seguir desarrollándome tanto personal como profesionalmente, combinando mis conocimientos en gestión empresarial con mi creatividad, iniciativa y disposición para asumir nuevos retos.</p>
         </div>
     </section>
 
@@ -133,7 +133,7 @@
                         <span class="tap-hint">Ver detalle &rarr;</span>
                     </div>
                     <div class="flip-card-back">
-                        <p>Interés por descubrir nuevos temas, adquirir conocimientos y explorar diferentes perspectivas.</p>
+                        <p>Interés por descubrir nuevos temas, adquirir conocimientos y explorar differentes perspectivas.</p>
                     </div>
                 </div>
             </div>
@@ -146,7 +146,7 @@
                         <span class="tap-hint">Ver detalle &rarr;</span>
                     </div>
                     <div class="flip-card-back">
-                        <p>Capacidad para observar, interpretar y profundizar en diferentes situaciones, buscando comprender más allá de lo evidente.</p>
+                        <p>Capacidad para observar, interpretar y profundizar en differentes situaciones, buscando comprender más allá de lo evidente.</p>
                     </div>
                 </div>
             </div>
@@ -172,7 +172,7 @@
                         <span class="tap-hint">Ver detalle &rarr;</span>
                     </div>
                     <div class="flip-card-back">
-                        <p>Disposición para experimentar con nuevas actividades, aprender habilidades y desenvolverse en diferentes entornos y situaciones.</p>
+                        <p>Disposición para experimentar con nuevas actividades, aprender habilidades y desenvolverse en differentes entornos y situaciones.</p>
                     </div>
                 </div>
             </div>
@@ -367,37 +367,32 @@
     </footer>
 </div>
 
-<!-- SCRIPT PARA CARGA, ANIMACIONES AL HACER SCROLL Y FILTROS -->
+<!-- SCRIPT PARA CARGA Y SCROLL REVEAL -->
 <script>
-    // Pantalla de carga inicial
     window.addEventListener('load', () => {
         setTimeout(() => {
             const loader = document.getElementById('loader-screen');
             loader.classList.add('hidden');
-            activarAnimacionesScroll();
+            iniciarScrollReveal();
         }, 1500);
     });
 
-    // Función para activar el efecto de aparición al hacer scroll
-    function activarAnimacionesScroll() {
+    function iniciarScrollReveal() {
         const reveals = document.querySelectorAll('.reveal');
         
-        const observer = new IntersectionObserver((entries, observer) => {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
                 }
             });
         }, {
-            threshold: 0.12
+            threshold: 0.1
         });
 
-        reveals.forEach(element => {
-            observer.observe(element);
-        });
+        reveals.forEach(el => observer.observe(el));
     }
 
-    // Filtrar o mostrar secciones individuales desde la barra superior
     function filtrarSeccion(idSeccion, event) {
         if (event) event.preventDefault();
 
@@ -423,14 +418,9 @@
             secciones.forEach(sec => {
                 if (sec.id === idSeccion) {
                     sec.style.display = 'block';
-                    // Forzar activación inmediata de la animación al cambiar de pestaña
-                    sec.classList.remove('active');
-                    void sec.offsetWidth;
+                    // Activar de inmediato al cambiar de pestaña
                     sec.classList.add('active');
-                    
-                    // Activar también las tarjetas internas de esa sección
-                    sec.querySelectorAll('.reveal').card?.classList.add('active');
-                    sec.querySelectorAll('.reveal').forEach(card => card.classList.add('active'));
+                    sec.querySelectorAll('.reveal').forEach(item => item.classList.add('active'));
                 } else {
                     sec.style.display = 'none';
                 }
