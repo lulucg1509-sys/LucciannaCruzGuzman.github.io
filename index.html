@@ -372,7 +372,6 @@
 
 <!-- SCRIPT PARA PANTALLA DE CARGA Y FILTRO DE SECCIONES -->
 <script>
-    // Desvanecer la pantalla de carga suavemente al abrir la página
     window.addEventListener('load', () => {
         setTimeout(() => {
             const loader = document.getElementById('loader-screen');
@@ -380,11 +379,9 @@
         }, 1200);
     });
 
-    // Mostrar solo la sección elegida en la barra superior (o todas en "Todo")
     function filtrarSeccion(idSeccion, event) {
         if (event) event.preventDefault();
 
-        // Actualizar botón activo en la barra superior
         document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
         if (event && event.target.classList.contains('nav-btn')) {
             event.target.classList.add('active');
