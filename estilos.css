@@ -1,4 +1,4 @@
-/* --- ESTILO EDITORIAL CÁLIDO + PANTALLA DE CARGA Y NAVEGACIÓN --- */
+/* --- ESTILO EDITORIAL CÁLIDO + PANTALLA DE CARGA Y CÁPSULA SUPERIOR --- */
 :root {
     --bg-base: #fcf8ee;
     --card-surface: rgba(255, 255, 255, 0.90);
@@ -15,7 +15,7 @@ body {
     background-color: var(--bg-base);
     color: var(--text-main);
     margin: 0;
-    padding: 95px 20px 45px 20px;
+    padding: 105px 20px 45px 20px;
     display: flex;
     justify-content: center;
     min-height: 100vh;
@@ -23,10 +23,13 @@ body {
     overflow-x: hidden;
 }
 
-/* --- PANTALLA DE CARGA INICIAL --- */
+/* --- PANTALLA DE CARGA CENTRADA --- */
 #loader-screen {
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background-color: #fcf8ee;
     z-index: 9999;
     display: flex;
@@ -46,28 +49,29 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
 }
 
 .loader-name {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 600;
     color: var(--primary-brown);
     letter-spacing: -0.3px;
 }
 
 .loader-subtitle {
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 3.5px;
     color: var(--amber-gold);
-    margin-top: 6px;
-    margin-bottom: 18px;
+    margin-top: 8px;
+    margin-bottom: 20px;
 }
 
 .loader-line-track {
-    width: 210px;
-    height: 2.5px;
+    width: 240px;
+    height: 3px;
     background: var(--amber-soft);
     border-radius: 4px;
     overflow: hidden;
@@ -78,7 +82,7 @@ body {
     height: 100%;
     background: var(--primary-brown);
     transform-origin: left;
-    animation: loadProgress 1.15s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: loadProgress 1.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 @keyframes loadProgress {
@@ -86,24 +90,31 @@ body {
     100% { transform: scaleX(1); }
 }
 
-/* --- BARRA DE NAVEGACIÓN SUPERIOR --- */
+/* --- BARRA DE NAVEGACIÓN TIPO PÍLDORA FLOTANTE (COMO LA FOTO 2) --- */
 .top-navbar {
     position: fixed;
-    top: 0;
+    top: 18px;
     left: 0;
     width: 100%;
-    background: rgba(252, 248, 238, 0.92);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--border-gold);
     z-index: 1000;
-    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
     box-sizing: border-box;
+    pointer-events: none;
 }
 
-.nav-inner {
-    max-width: 960px;
-    margin: 0 auto;
+.nav-pill {
+    pointer-events: auto;
+    max-width: 860px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--border-gold);
+    border-radius: 50px;
+    padding: 12px 28px;
+    box-shadow: 0 10px 30px rgba(74, 46, 22, 0.08);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,26 +123,27 @@ body {
 }
 
 .nav-brand {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 700;
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     color: var(--primary-brown);
     text-decoration: none;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
 }
 
 .nav-links {
     display: flex;
     gap: 6px;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .nav-btn {
     background: transparent;
     border: none;
     font-family: 'Outfit', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 0.88rem;
+    font-weight: 500;
     color: var(--text-muted);
     padding: 6px 14px;
     border-radius: 20px;
@@ -141,13 +153,12 @@ body {
 
 .nav-btn:hover {
     color: var(--primary-brown);
-    background: rgba(254, 243, 199, 0.6);
 }
 
 .nav-btn.active {
     color: var(--primary-brown);
+    font-weight: 700;
     background: var(--amber-soft);
-    border: 1px solid var(--border-gold);
 }
 
 .fade-in-section {
@@ -537,9 +548,10 @@ footer {
 
 @media (max-width: 768px) {
     body {
-        padding-top: 120px;
+        padding-top: 135px;
     }
-    .nav-inner {
+    .nav-pill {
+        border-radius: 24px;
         justify-content: center;
     }
     .container {
