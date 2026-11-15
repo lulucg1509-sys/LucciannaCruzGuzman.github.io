@@ -1,4 +1,4 @@
-/* --- ESTILO EDITORIAL CÁLIDO + ANIMACIONES DE APARICIÓN AL HACER SCROLL --- */
+/* --- ESTILO EDITORIAL CÁLIDO + SCROLL REVEAL FLUIDO --- */
 :root {
     --bg-base: #fcf8ee;
     --card-surface: rgba(255, 255, 255, 0.94);
@@ -23,11 +23,11 @@ body {
     overflow-x: hidden;
 }
 
-/* --- EFECTO DE APARICIÓN AL HACER SCROLL (SCROLL REVEAL) --- */
+/* --- CLASE DE APARICIÓN AL BAJAR (SCROLL REVEAL) --- */
 .reveal {
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(35px);
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
     will-change: opacity, transform;
 }
 
@@ -36,7 +36,7 @@ body {
     transform: translateY(0);
 }
 
-/* --- PANTALLA DE CARGA CON TEXTOS QUE SUBEN DESDE ABAJO --- */
+/* --- PANTALLA DE CARGA INICIAL --- */
 #loader-screen {
     position: fixed;
     top: 0;
@@ -108,14 +108,8 @@ body {
 }
 
 @keyframes slideUpFade {
-    0% {
-        opacity: 0;
-        transform: translateY(35px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    0% { opacity: 0; transform: translateY(35px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInOnly {
